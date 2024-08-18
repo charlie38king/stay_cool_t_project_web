@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+    <html lang="en-CA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--=============== CSS TINT SELECTOR ===============-->
+        <link rel="stylesheet" href="assets/css/style_tint_selector.css">
+
+        <title>Stay Cool Windows Tint Selector Page</title>
+
+        <script>
+            function ocultarArticles() {
+                // Ocultar los elementos que desees
+                document.getElementById('suv_article').style.display = 'none';
+                document.getElementById('pickup_article').style.display = 'none';
+                // Agrega más elementos aquí si es necesario
+            }
+
+            function clickSedan() {
+                // Ocultar SUV y Pickup
+                document.getElementById('suv_article').style.display = 'none';
+                document.getElementById('pickup_article').style.display = 'none';
+                // Mostrar Sedan
+                document.getElementById('sedan_article').style.display = 'inline-block';
+            }
+
+            function clickSuv() {
+                // Ocultar Sedan y Pickup
+                document.getElementById('sedan_article').style.display = 'none';
+                document.getElementById('pickup_article').style.display = 'none';
+                // Mostrar SUV
+                document.getElementById('suv_article').style.display = 'inline-block';
+            }
+
+            function clickPickup() {
+                // Ocultar Sedan y SUV
+                document.getElementById('sedan_article').style.display = 'none';
+                document.getElementById('suv_article').style.display = 'none';
+                // Mostrar Pickup
+                document.getElementById('pickup_article').style.display = 'inline-block';
+            }
+        </script>
+
+    </head>
+    <body onload="ocultarArticles()">
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav_logo">
+                    <img src="assets/img/fav-index-black.png" alt="">
+                </a>
+                <div class="nav_menu" id="nav_menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active_link">HOME</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#about" class="nav_link">ABOUT</a>
+                        </li>
+                        <div class="dropdown">
+                            <li class="nav_item">
+                                <a href="#services" class="nav_link">SERVICES</a>
+                            </li>
+                            <div class="dropdown-content">
+                                <li class="nav_item">
+                                    <a href="" class="nav_link">VEHICLE TINT</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="" class="nav_link">PAINT PROTECTION</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="" class="nav_link">COMMERCIAL RESIDENTIAL</a>
+                                </li>
+                            </div>
+                        </div>
+                        <li class="nav_item">
+                            <a href="#popular" class="nav_link">REVIEWS</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#contact" class="nav_link">CONTACT</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#blog" class="nav_link">BLOG</a>
+                        </li>
+                    </ul>
+                    <div class="nav_close" id="nav_close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <div class="nav_toggle" id="nav_toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== ABOUT ====================-->
+            <section class="featured section" id="featured">
+                &nbsp;<br>
+                &nbsp;<br>
+                &nbsp;<br>                
+                <h2 class="section_title featured_align">
+                    TINT SIMULATOR
+                </h2>
+                <p class="tint_copy_warning">            
+                    Please, if you notice that you lose the image of the selected car, press the selector again.
+                </p>
+                <br>
+                <div class="featured_container container">
+                    <ul class="featured_filters">                        
+                        <li>
+                            <button class="featured_item active_featured" data-filter=".sedan" onclick="clickSedan()">
+                                <img src="assets/img/svg-sedan.svg" alt="">
+                            </button>
+                        </li>                        
+                        <li>
+                            <button class="featured_item" data-filter=".suv" onclick="clickSuv()">
+                                <img src="assets/img/svg-car-suv.svg" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="featured_item" data-filter=".pickup" onclick="clickPickup()">
+                                <img src="assets/img/svg-pickup-truck.svg" alt="">
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="featured_content_tint grid">
+                        <article class="featured_card mix sedan" id="sedan_article">
+                            <section class="about section banner-wrapper" id="abouts">
+                                <div class="about_container container grid banner-content mix">
+                                    <!-- banner left-->
+                                    <div class = "about_data banner-left">
+                                        <div class = "percentage-content">
+                                            <h3>select your vehicle colour and tint options</h3>
+                                            <br>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-black percentage percentage-70 active-percentage" data-filter=".70" onclick="sedanblack70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-black percentage percentage-50" data-filter=".50" onclick="sedanblack50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-black percentage percentage-35" data-filter=".35" onclick="sedanblack35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-black percentage percentage-20" data-filter=".20" onclick="sedanblack20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-black percentage percentage-05" data-filter=".05" onclick="sedanblack05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-blue percentage percentage-70" data-filter=".70" onclick="sedanblue70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-blue percentage percentage-50" data-filter=".50" onclick="sedanblue50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-blue percentage percentage-35" data-filter=".35" onclick="sedanblue35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-blue percentage percentage-20" data-filter=".20" onclick="sedanblue20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-blue percentage percentage-05" data-filter=".05" onclick="sedanblue05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-white percentage percentage-70" data-filter=".70" onclick="sedanwhite70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-white percentage percentage-50" data-filter=".50" onclick="sedanwhite50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-white percentage percentage-35" data-filter=".35" onclick="sedanwhite35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-white percentage percentage-20" data-filter=".20" onclick="sedanwhite20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-white percentage percentage-05" data-filter=".05" onclick="sedanwhite05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                        </div>
+                                        <p class="about_descriptionxxx tint_copy">
+                                            Please note that percentages will be applied to side and rear windows only.
+                                            For the front windshield, you will need to consult us directly.
+                                        </p>
+                                    </div>
+                                    <!-- banner right-->
+                                    <div class = "about_groupxxx about_tint banner-right banner-right-sedan">
+                                        <img src = "assets/img/tint_car/tint_black_sedan_70.jpg" alt="" class="tint_img" id="sedan_img">
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                        <article class="featured_card mix suv" id="suv_article">
+                            <section class="about section banner-wrapper" id="abouts">
+                                <div class="about_container container grid banner-content mix">
+                                    <!-- banner left-->
+                                    <div class = "about_data banner-left">
+                                        <div class = "percentage-content">
+                                            <h3>select your vehicle colour and tint options</h3>
+                                            <br>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-black percentage percentage-70 active-percentage" data-filter=".70" onclick="suvblack70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-black percentage percentage-50" data-filter=".50" onclick="suvblack50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-black percentage percentage-35" data-filter=".35" onclick="suvblack35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-black percentage percentage-20" data-filter=".20" onclick="suvblack20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-black percentage percentage-05" data-filter=".05" onclick="suvblack05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-blue percentage percentage-70" data-filter=".70" onclick="suvblue70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-blue percentage percentage-50" data-filter=".50" onclick="suvblue50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-blue percentage percentage-35" data-filter=".35" onclick="suvblue35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-blue percentage percentage-20" data-filter=".20" onclick="suvblue20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-blue percentage percentage-05" data-filter=".05" onclick="suvblue05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-white percentage percentage-70" data-filter=".70" onclick="suvwhite70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-white percentage percentage-50" data-filter=".50" onclick="suvwhite50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-white percentage percentage-35" data-filter=".35" onclick="suvwhite35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-white percentage percentage-20" data-filter=".20" onclick="suvwhite20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-white percentage percentage-05" data-filter=".05" onclick="suvwhite05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                        </div>
+                                        <p class="about_descriptionxxx tint_copy">
+                                            Please note that percentages will be applied to side and rear windows only.
+                                            For the front windshield, you will need to consult us directly.
+                                        </p>
+                                    </div>
+                                    <!-- banner right-->
+                                    <div class = "about_groupxxx about_tint banner-right banner-right-suv">
+                                        <img src = "assets/img/tint_car/tint_black_suv_70.jpg" alt="" class="tint_img" id="suv_img">
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                        <article class="featured_card mix pickup" id="pickup_article">
+                            <section class="about section banner-wrapper" id="abouts">
+                                <div class="about_container container grid banner-content mix">
+                                    <!-- banner left-->
+                                    <div class = "about_data banner-left">
+                                        <div class = "percentage-content">
+                                            <h3>select your vehicle colour and tint options</h3>
+                                            <br>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-black percentage percentage-70 active-percentage" data-filter=".70" onclick="pickupblack70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-black percentage percentage-50" data-filter=".50" onclick="pickupblack50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-black percentage percentage-35" data-filter=".35" onclick="pickupblack35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-black percentage percentage-20" data-filter=".20" onclick="pickupblack20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-black percentage percentage-05" data-filter=".05" onclick="pickupblack05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-blue percentage percentage-70" data-filter=".70" onclick="pickupblue70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-blue percentage percentage-50" data-filter=".50" onclick="pickupblue50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-blue percentage percentage-35" data-filter=".35" onclick="pickupblue35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-blue percentage percentage-20" data-filter=".20" onclick="pickupblue20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-blue percentage percentage-05" data-filter=".05" onclick="pickupblue05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                            <div class = "percentage-groups">
+                                                <div class = "color-white percentage percentage-70" data-filter=".70" onclick="pickupwhite70();"><p><strong>70</strong></p></div>
+                                                <div class = "color-white percentage percentage-50" data-filter=".50" onclick="pickupwhite50();"><p><strong>50</strong></p></div>
+                                                <div class = "color-white percentage percentage-35" data-filter=".35" onclick="pickupwhite35();"><p><strong>35</strong></p></div>
+                                                <div class = "color-white percentage percentage-20" data-filter=".20" onclick="pickupwhite20();"><p><strong>20</strong></p></div>
+                                                <div class = "color-white percentage percentage-05" data-filter=".05" onclick="pickupwhite05();"><p><strong>05</strong></p></div>
+                                            </div>
+                                        </div>
+                                        <p class="about_descriptionxxx tint_copy">
+                                            Please note that percentages will be applied to side and rear windows only.
+                                            For the front windshield, you will need to consult us directly.
+                                        </p>
+                                    </div>
+                                    <!-- banner right-->
+                                    <div class = "about_groupxxx about_tint banner-right banner-right-pickup">
+                                        <img src = "assets/img/tint_car/tint_black_pickup_70.jpg" alt="" class="tint_img" id="pickup_img">
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="contact">
+            <div class="shape shape_big"></div>
+            <div class="shape shape_small"></div>
+            <div class="footer_container container grid">
+                <div class="footer_content">
+                    <a href="#" class="footer_logo">
+                        <img src="assets/img/fav-index-black.png" alt="">
+                    </a>
+                    <p class="footer_description">
+                        Elevate your ride. <br>
+                        Over
+                        <script type=text/javascript>
+                            var f = new Date();
+                            document.write(f.getFullYear() - 2004);
+                        </script>
+                        years of serving Calgary <br>
+                        Premium Window Tinting Installation
+                    </p>
+                </div>
+                <div class="footer_content">
+                    <h3 class="footer_title">
+                        <i class="ri-information-line"></i> Contact us
+                    </h3>
+                    <ul class="footer_links">
+                        <li>
+                            <a href="tel:" class="footer_link"><i class="ri-phone-line"></i> (+1) 234-567-8901</a>
+                        </li>
+                        <li>
+                            <a href="mailto:" class="footer_link"><i class="ri-mail-send-line"></i> info@empresa.com</a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/" target="_blank" class="footer_link"><i class="ri-map-pin-line"></i> 123 Street Name XX, City</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <h3 class="footer_title">
+                        <i class="ri-time-line"></i> Hours
+                    </h3>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#" class="footer_link">Mon-Fri 08AM-05PM</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer_link">Saturday 09AM-04PM</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer_link">Sunday: Closed</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_content">
+                    <h3 class="footer_title">
+                        <i class="ri-share-line"></i> Follow us
+                    </h3>
+                    <ul class="footer_social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer_social_link">
+                            <i class="ri-facebook-box-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer_social_link">
+                            <i class="ri-instagram-line ri-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer_social_link">
+                            <i class="ri-twitter-x-line ri-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/" target="_blank" class="footer_social_link">
+                            <i class="ri-linkedin-box-fill ri-lg"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer_copy">
+                Copyright ©
+                <script type=text/javascript>
+                    var f = new Date();
+                    document.write(f.getFullYear());
+                </script>
+                Stay Cool Window Tinting Ltd.
+            </span>
+        </footer>
+
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll_up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MIXITUP JS ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <!--=============== JS TINT SELECTOR ===============-->
+        <script src="assets/js/script_tint_selector.js"></script>
+
+    </body>
+</html>
