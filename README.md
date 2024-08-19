@@ -4,11 +4,11 @@
 Este repositorio contiene el código para la actualización de la página web de Stay Cool Tinting, una empresa de tintado de vehículos. Incluye un diseño moderno para la página principal en modo oscuro y claro, así como la implementación de un selector de tintado interactivo basado en JavaScript puro.
 
 ## Características
-  ### Modo Oscuro y Claro: Diseño adaptable que permite a los usuarios cambiar entre modos de visualización.
+  1. Modo Oscuro y Claro: Diseño adaptable que permite a los usuarios cambiar entre modos de visualización.
   
-  ### Selector de Tintado: Herramienta interactiva desarrollada en JavaScript que permite a los usuarios visualizar diferentes opciones de tintado.
+  2. Selector de Tintado: Herramienta interactiva desarrollada en JavaScript que permite a los usuarios visualizar diferentes opciones de tintado.
   
-  ### Diseño Responsive: Optimizado para una experiencia de usuario fluida en dispositivos móviles y de escritorio.
+  3. Diseño Responsive: Optimizado para una experiencia de usuario fluida en dispositivos móviles y de escritorio.
 
 ## Tecnologías Utilizadas
 HTML5,
